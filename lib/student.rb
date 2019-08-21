@@ -111,7 +111,7 @@ class Student
     end
   end
 
-  def self.all_students_in_grade_X(X)
+  def self.all_students_in_grade_X(grade)
     # returns an array of all students in a given grade X
     sql = <<-SQL
       SELECT *
