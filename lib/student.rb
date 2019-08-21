@@ -2,7 +2,7 @@ class Student
   attr_accessor :id, :name, :grade
   def initialize(id, name, grade)
     @id = id
-    @name =name
+    @name = name
     @grade = grade
   end
   def self.new_from_db(row)
@@ -47,6 +47,7 @@ class Student
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
   end
 
   def self.create_table
