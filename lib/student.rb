@@ -74,7 +74,6 @@ class Student
     #   self.new_from_db(row)
     # end
   end
-  end
 
   def self.students_below_12th_grade
     # returns an array of all stududents in grades 11 or below
